@@ -5,6 +5,10 @@ const keys = require('../config/keys');
 
 const User = mongoose.model('User');
 
+GoogleStrategy.prototype.userProfile = function (token, done) {
+  done(null, {})
+};
+
 passport.serializeUser((user, done) => {
   done(null, user.id);
 });
